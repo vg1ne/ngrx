@@ -19,7 +19,7 @@ export class IncrementByArgAction implements Action{
   constructor(public payload: number){}
 }
 
-export type CounterActions =
+export type All =
   | IncrementAction
   | DecrementAction
   | ResetAction

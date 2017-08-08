@@ -1,7 +1,6 @@
-import {Action} from "@ngrx/store"
 import * as CounterActions from "../_actions/counter"
 
-export function counterReducer(state: number = 0, action: Action){
+export function counterReducer(state: number = 0, action: CounterActions.All){
   switch (action.type){
     case CounterActions.INCREMENT:
       return state + 1;
@@ -10,7 +9,7 @@ export function counterReducer(state: number = 0, action: Action){
     case CounterActions.RESET:
       return 0;
     case CounterActions.INCREMENTBYARG:
-      return state;
+      return state + action.payload;
     default:
       return state;
   }

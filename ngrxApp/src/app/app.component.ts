@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import {Store} from "@ngrx/store"
 import {Observable} from "rxjs/Observable"
-import {INCREMENT, DECREMENT, RESET, INCREMENTBYARG, CounterActions} from "./_actions/counter"
+import * as CounterActions from "./_actions/counter"
 
 interface AppState {
   counter: number;
@@ -27,15 +27,15 @@ export class AppComponent {
   }
 
   increment(){
-    this.store.dispatch({type: INCREMENT})
+    this.store.dispatch(new CounterActions.IncrementAction())
   }
   decrement(){
-    this.store.dispatch({type: DECREMENT})
+    this.store.dispatch(new CounterActions.DecrementAction())
   }
   reset(){
-    this.store.dispatch({type: RESET})
+    this.store.dispatch(new CounterActions.ResetAction())
   }
   incrementByArg(){
-    this.store.dispatch({type: INCREMENTBYARG})
+    this.store.dispatch(new CounterActions.IncrementByArgAction(10))
   }
 }
