@@ -31,3 +31,6 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ##Architecture
 https://gist.github.com/btroncone/a6e4347326749f938510
 https://github.com/ngrx/platform/blob/master/docs/store/actions.md#action-reducers
+
+## Redux devtools
+http://extension.remotedev.io/
