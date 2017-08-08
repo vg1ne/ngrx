@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d2fdfae2-6748-4d18-acef-00d2e45492ea" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ngrxApp/src/app/_actions/counter.ts" afterPath="$PROJECT_DIR$/ngrxApp/src/app/_actions/counter.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ngrxApp/src/app/_reducers/counter.ts" afterPath="$PROJECT_DIR$/ngrxApp/src/app/_reducers/counter.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ngrxApp/src/app/app.component.ts" afterPath="$PROJECT_DIR$/ngrxApp/src/app/app.component.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ngrxApp/README.md" afterPath="$PROJECT_DIR$/ngrxApp/README.md" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -55,8 +53,8 @@
       <file leaf-file-name="app.component.ts" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ngrxApp/src/app/app.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="31" column="14" lean-forward="true" selection-start-line="31" selection-start-column="14" selection-end-line="31" selection-end-column="14" />
+            <state relative-caret-position="306">
+              <caret line="33" column="3" lean-forward="true" selection-start-line="33" selection-start-column="3" selection-end-line="33" selection-end-column="3" />
               <folding>
                 <element signature="e#0#42#0" expanded="true" />
               </folding>
@@ -97,6 +95,7 @@
         <option value="$PROJECT_DIR$/ngrxApp/src/app/_actions/counter.ts" />
         <option value="$PROJECT_DIR$/ngrxApp/src/app/_reducers/counter.ts" />
         <option value="$PROJECT_DIR$/ngrxApp/src/app/app.component.ts" />
+        <option value="$PROJECT_DIR$/ngrxApp/README.md" />
       </list>
     </option>
   </component>
@@ -150,19 +149,6 @@
               <item name="ngrx" type="462c0819:PsiDirectoryNode" />
               <item name="ngrxApp" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="ngrx" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ngrx" type="462c0819:PsiDirectoryNode" />
-              <item name="ngrxApp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ngrx" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ngrx" type="462c0819:PsiDirectoryNode" />
-              <item name="ngrxApp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -211,7 +197,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1502180879333</updated>
-      <workItem from="1502180882317" duration="10609000" />
+      <workItem from="1502180882317" duration="10675000" />
     </task>
     <task id="LOCAL-00001" summary="idea">
       <created>1502180905187</created>
@@ -262,11 +248,18 @@
       <option name="project" value="LOCAL" />
       <updated>1502197683318</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="added IncrementBy action">
+      <created>1502197945099</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1502197945099</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10609000" />
+    <option name="totallyTimeSpent" value="10675000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
@@ -306,7 +299,8 @@
     <MESSAGE value="removed all" />
     <MESSAGE value="actions added&#10;watch here https://github.com/ngrx/platform/blob/48a2381c212d5dd3fa2b9435776c1aaa60734235/example-app/app/books/reducers/index.ts" />
     <MESSAGE value="refactoring of actions" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactoring of actions" />
+    <MESSAGE value="added IncrementBy action" />
+    <option name="LAST_COMMIT_MESSAGE" value="added IncrementBy action" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -500,10 +494,21 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/ngrxApp/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="452">
+            <caret line="32" column="82" lean-forward="false" selection-start-line="32" selection-start-column="82" selection-end-line="32" selection-end-column="82" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ngrxApp/src/app/app.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="31" column="14" lean-forward="true" selection-start-line="31" selection-start-column="14" selection-end-line="31" selection-end-column="14" />
+        <state relative-caret-position="306">
+          <caret line="33" column="3" lean-forward="true" selection-start-line="33" selection-start-column="3" selection-end-line="33" selection-end-column="3" />
           <folding>
             <element signature="e#0#42#0" expanded="true" />
           </folding>
