@@ -9,6 +9,13 @@ import {counterReducer} from "./_reducers/counter"
 
 import { AppComponent } from './app.component';
 
+
+// const initialStateFromSomewhere = { counter: 3 };
+// const initialState = { counter: 2 };
+// export function getInitialState() {
+//   return {...initialState, ...initialStateFromSomewhere};
+// }
+
 @NgModule({
   declarations: [
     AppComponent
@@ -16,7 +23,7 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule,
     FormsModule,
-    StoreModule.forRoot({counter: counterReducer}),
+    StoreModule.forRoot(counterReducer),
     StoreDevtoolsModule.instrument({
       maxAge: 5
     })
@@ -25,3 +32,4 @@ import { AppComponent } from './app.component';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+// StoreModule.forRoot(counterReducer, {initialState: getInitialState}),

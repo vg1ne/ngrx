@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="d2fdfae2-6748-4d18-acef-00d2e45492ea" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ngrxApp/src/app/app.component.ts" afterPath="$PROJECT_DIR$/ngrxApp/src/app/app.component.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ngrxApp/src/app/app.module.ts" afterPath="$PROJECT_DIR$/ngrxApp/src/app/app.module.ts" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -18,11 +17,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="app.module.ts" pinned="false" current-in-tab="false">
+      <file leaf-file-name="app.module.ts" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ngrxApp/src/app/app.module.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="214">
-              <caret line="17" column="16" lean-forward="false" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
+            <state relative-caret-position="299">
+              <caret line="27" column="15" lean-forward="true" selection-start-line="27" selection-start-column="15" selection-end-line="27" selection-end-column="15" />
               <folding>
                 <element signature="e#0#58#0" expanded="true" />
                 <element signature="e#238#297#0" expanded="true" />
@@ -51,10 +50,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.component.ts" pinned="false" current-in-tab="true">
+      <file leaf-file-name="app.component.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ngrxApp/src/app/app.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
+            <state relative-caret-position="119">
               <caret line="22" column="36" lean-forward="true" selection-start-line="22" selection-start-column="36" selection-end-line="22" selection-end-column="36" />
               <folding>
                 <element signature="e#0#42#0" expanded="true" />
@@ -95,8 +94,8 @@
         <option value="$PROJECT_DIR$/ngrxApp/src/app/_actions/counter.ts" />
         <option value="$PROJECT_DIR$/ngrxApp/src/app/_reducers/counter.ts" />
         <option value="$PROJECT_DIR$/ngrxApp/README.md" />
-        <option value="$PROJECT_DIR$/ngrxApp/src/app/app.module.ts" />
         <option value="$PROJECT_DIR$/ngrxApp/src/app/app.component.ts" />
+        <option value="$PROJECT_DIR$/ngrxApp/src/app/app.module.ts" />
       </list>
     </option>
   </component>
@@ -198,7 +197,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1502180879333</updated>
-      <workItem from="1502180882317" duration="12097000" />
+      <workItem from="1502180882317" duration="13138000" />
     </task>
     <task id="LOCAL-00001" summary="idea">
       <created>1502180905187</created>
@@ -277,11 +276,18 @@
       <option name="project" value="LOCAL" />
       <updated>1502199079894</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="added ngModel to change step of incremention">
+      <created>1502199433372</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1502199433372</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12097000" />
+    <option name="totallyTimeSpent" value="13138000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
@@ -325,7 +331,8 @@
     <MESSAGE value="updated readme.md" />
     <MESSAGE value="added @ngrx/store-devtools" />
     <MESSAGE value="added help in readme.md redux-devtools" />
-    <option name="LAST_COMMIT_MESSAGE" value="added help in readme.md redux-devtools" />
+    <MESSAGE value="added ngModel to change step of incremention" />
+    <option name="LAST_COMMIT_MESSAGE" value="added ngModel to change step of incremention" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -539,23 +546,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ngrxApp/src/app/app.module.ts">
+    <entry file="file://$PROJECT_DIR$/ngrxApp/src/app/app.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="17" column="16" lean-forward="false" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
+        <state relative-caret-position="119">
+          <caret line="22" column="36" lean-forward="true" selection-start-line="22" selection-start-column="36" selection-end-line="22" selection-end-column="36" />
           <folding>
-            <element signature="e#0#58#0" expanded="true" />
-            <element signature="e#238#297#0" expanded="true" />
+            <element signature="e#0#42#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ngrxApp/src/app/app.component.ts">
+    <entry file="file://$PROJECT_DIR$/ngrxApp/src/app/app.module.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="36" lean-forward="true" selection-start-line="22" selection-start-column="36" selection-end-line="22" selection-end-column="36" />
+        <state relative-caret-position="299">
+          <caret line="27" column="15" lean-forward="true" selection-start-line="27" selection-start-column="15" selection-end-line="27" selection-end-column="15" />
           <folding>
-            <element signature="e#0#42#0" expanded="true" />
+            <element signature="e#0#58#0" expanded="true" />
+            <element signature="e#238#297#0" expanded="true" />
           </folding>
         </state>
       </provider>
