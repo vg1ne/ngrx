@@ -23,7 +23,7 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule,
     FormsModule,
-    StoreModule.forRoot(counterReducer),
+    StoreModule.forRoot({counter: counterReducer}),
     StoreDevtoolsModule.instrument({
       maxAge: 5
     })
