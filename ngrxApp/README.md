@@ -34,3 +34,6 @@ https://github.com/ngrx/platform/blob/master/docs/store/actions.md#action-reduce
 
 ## Redux devtools
 http://extension.remotedev.io/
+
+##last
+https://gist.github.com/btroncone/a6e4347326749f938510#people-reducer
