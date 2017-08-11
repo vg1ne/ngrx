@@ -1,0 +1,16 @@
+<section class="mat-typography">
+  <h1>This header will be styled</h1>
+</section>
+
+<md-card>
+  <button (click)="increment()">Increment</button>
+  <div>Current Count: {{ counter | async }}</div>
+  <button (click)="decrement()">Decrement</button>
+
+  <button (click)="reset()">Reset Counter</button>
+  <button (click)="incrementByArg()">Increment by {{incrementStep}}</button>
+  <br>
+  <label for="incrementStep">Increment step:</label>
+  <input [(ngModel)]="incrementStep" id="incrementStep"/>
+</md-card>
+

@@ -2,6 +2,9 @@ import { Component } from '@angular/core';
 import {Store} from "@ngrx/store"
 import {Observable} from "rxjs/Observable"
 import * as CounterActions from "./_actions/counter"
+import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/mergeMap';
+import 'rxjs/add/operator/do';
 
 interface AppState {
   counter: number;
@@ -9,17 +12,7 @@ interface AppState {
 
 @Component({
   selector: 'app-root',
-  template: `
-		<button (click)="increment()">Increment</button>
-		<div>Current Count: {{ counter | async }}</div>
-		<button (click)="decrement()">Decrement</button>
-
-		<button (click)="reset()">Reset Counter</button>
-    <button (click)="incrementByArg()">Increment by {{incrementStep}}</button>
-    <br>
-    <label for="incrementStep">Increment step:</label>
-    <input [(ngModel)]="incrementStep" id="incrementStep"/>
-	`,
+  templateUrl: "app.component.html",
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
@@ -29,6 +22,7 @@ export class AppComponent {
   constructor(private  store: Store<AppState>){
     this.counter = store.select('counter')
     this.incrementStep = 10;
+
   }
 
   increment(){
