@@ -1,7 +1,7 @@
-import { Actions, Effect} from "@ngrx/effects"
+import {Actions, Effect, toPayload} from "@ngrx/effects"
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/do';
-import {DECREMENT} from '../_actions/counter'
+import {DECREMENT, INCREMENTBYARG} from '../_actions/counter'
 import {Injectable} from "@angular/core";
 
 @Injectable()
@@ -10,6 +10,10 @@ export class CounterEffects {
     .ofType(DECREMENT)
     .do(action => {console.log(action)})
 
+  @Effect({dispatch: false}) decrementedByArg$ = this.actions$
+    .ofType(INCREMENTBYARG)
+    .map(toPayload)
+    .do(payload => {console.log(payload)})
 
   constructor(private actions$: Actions){}
 }
