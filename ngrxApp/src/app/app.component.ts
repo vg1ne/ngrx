@@ -1,9 +1,5 @@
 import { Component } from '@angular/core';
 
-import 'rxjs/add/operator/map';
-import 'rxjs/add/operator/mergeMap';
-import 'rxjs/add/operator/do';
-
 @Component({
   selector: 'app-root',
   templateUrl: "app.component.html",
