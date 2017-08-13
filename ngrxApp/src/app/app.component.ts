@@ -19,8 +19,8 @@ export class AppComponent {
 
   constructor(store: Store<AppStore>){
     this.appStore = store
-    store.dispatch(new SelectTab(1))
     this.selectedTab$ = store.select(state => state.selectedTab)
+    store.dispatch(new SelectTab(1))
   }
   selectChange($event){
     this.appStore.dispatch(new SelectTab($event.index))

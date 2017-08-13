@@ -16,6 +16,7 @@ import {StoreModule} from "@ngrx/store";
 import {counterReducer} from "./counter/_reducers/counter";
 import {bookReducer} from "./book/_reducers/book.reducer";
 import {AppEffects} from "./_effects/app.effects";
+import {BookEffect} from "./book/_effects/book.effect";
 
 @NgModule({
   declarations: [
@@ -33,7 +34,7 @@ import {AppEffects} from "./_effects/app.effects";
       counter: counterReducer,
       books: bookReducer
     }),
-    EffectsModule.forRoot([AppEffects]),
+    EffectsModule.forRoot([AppEffects, BookEffect]),
     StoreDevtoolsModule.instrument({
       maxAge: 20
     }),

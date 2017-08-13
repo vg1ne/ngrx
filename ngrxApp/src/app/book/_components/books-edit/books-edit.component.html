@@ -1,0 +1,16 @@
+<form name="bookForm">
+  <h2>Here you can add a new book:</h2>
+  <div class="form-row">
+    <label for="name">Book name:</label>
+    <input id="name" name="name" [(ngModel)]="name">
+  </div>
+  <div class="form-row">
+    <label for="price">Book price:</label>
+    <input id="price" name="price" [(ngModel)]="price">
+  </div>
+  <div class="form-row">
+    <label for="count">Book count:</label>
+    <input id="count" name="count" [(ngModel)]="count">
+  </div>
+  <button md-raised-button (click)="addBook($event)" type="button">Add Book</button>
+</form>
