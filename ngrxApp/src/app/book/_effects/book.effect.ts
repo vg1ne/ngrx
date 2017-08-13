@@ -13,7 +13,7 @@ export class BookEffect {
     .ofType(ADD_BOOK)
     .do(action => {console.log(action)})
     .switchMap(action => {
-      return Observable.of({type: action.type, payload: action.payload})
+      return Observable.of({type: action.type, payload: action['payload']})
     })
 
 
