@@ -7,7 +7,7 @@ import {StoreDevtoolsModule} from '@ngrx/store-devtools';
 
 import {AppComponent} from './app.component';
 import {CounterModule} from "./counter/counter.module"
-
+import {BookModule} from "./book/book.module"
 
 @NgModule({
   declarations: [
@@ -22,7 +22,8 @@ import {CounterModule} from "./counter/counter.module"
       maxAge: 20
     }),
 
-    CounterModule
+    CounterModule,
+    BookModule
   ],
   providers: [
     Actions

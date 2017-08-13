@@ -1,0 +1,22 @@
+import * as BookActions from "../_actions/book.actions"
+
+export function bookReducer(state = [], action: BookActions.All){
+  switch (action.type){
+    case BookActions.ADD_BOOK:
+      return [...state, Object.assign(
+        {},
+        {
+          id: action.payload.id,
+          name: action.payload.name,
+          price: action.payload.price?action.payload.price:20,
+          count: action.payload.count?action.payload.count:3
+        })
+      ];
+    case BookActions.REMOVE_BOOK:
+      return state.filter(book => book.id!==action.payload.id)
+    case BookActions.INIT_ALL_BOOKS:
+      return state.concat(state, action.payload)
+    default:
+      return state;
+  }
+}
