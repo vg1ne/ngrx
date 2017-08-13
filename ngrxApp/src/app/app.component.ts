@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
-import {Store} from "@ngrx/store";
+import {Action, Store} from "@ngrx/store";
 import {SelectTab} from "./_actions/user.actions";
 import {Observable} from "rxjs/Observable";
+import {Subject} from "rxjs/Subject";
 
 export class AppStore{
   selectedTab: number
@@ -13,15 +14,15 @@ export class AppStore{
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  selectedTab: number = 0
+  selectedTab$: Observable<number>
+  appStore: Store<AppStore>
 
   constructor(store: Store<AppStore>){
+    this.appStore = store
     store.dispatch(new SelectTab(1))
-    const selectedTab$ = store.select('selectedTab')
-    selectedTab$.subscribe(val => {
-      this.selectedTab = val
-      console.log(val)
-    })
+    this.selectedTab$ = store.select(state => state.selectedTab)
   }
-
+  selectChange($event){
+    this.appStore.dispatch(new SelectTab($event.index))
+  }
 }
