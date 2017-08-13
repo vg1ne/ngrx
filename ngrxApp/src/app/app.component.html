@@ -1,7 +1,7 @@
 <section class="mat-typography">
   <h1>This is main app header!</h1>
 </section>
-{{selectedTab | async}}
+<h1>{{selectedTab | async}}</h1>
 <md-tab-group [selectedIndex]="selectedTab | async">
   <md-tab label="Book">
     <app-books-list></app-books-list>

@@ -13,9 +13,15 @@ export class AppStore{
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  selectedTab: Observable<number>
+  selectedTab: number = 0
+
   constructor(store: Store<AppStore>){
     store.dispatch(new SelectTab(1))
-    this.selectedTab= store.select('selectedTab')
+    const selectedTab$ = store.select('selectedTab')
+    selectedTab$.subscribe(val => {
+      this.selectedTab = val
+      console.log(val)
+    })
   }
+
 }
