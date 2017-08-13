@@ -1,3 +1,7 @@
 <section *ngIf="books">
-  <app-book *ngFor="let book of books | async" [book]="book"></app-book>
+  <app-book
+    *ngFor="let book of books | async"
+    [book]="book"
+    (buy)="onBuy($event)">
+  </app-book>
 </section>

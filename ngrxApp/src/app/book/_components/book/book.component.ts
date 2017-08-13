@@ -1,4 +1,5 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Input, Output} from '@angular/core';
+import {EventEmitter} from "@angular/core"
 import {Book} from "../../_models/book.model"
 
 @Component({
@@ -6,12 +7,15 @@ import {Book} from "../../_models/book.model"
   templateUrl: './book.component.html',
   styleUrls: ['./book.component.css']
 })
-export class BookComponent implements OnInit {
+export class BookComponent {
   @Input() book: Book
+  @Output() buy: EventEmitter<Book> = new EventEmitter()
   constructor(){
   }
-
-  ngOnInit() {
+  buyBook(){
+    this.buy.emit(this.book)
   }
-
+  get isBuyDisabled(){
+    return this.book.count<1
+  }
 }

@@ -1,6 +1,12 @@
 <section class="mat-typography">
   <h1>This is main app header!</h1>
 </section>
-<app-counter></app-counter>
 
-<app-books-list></app-books-list>
+<md-tab-group>
+  <md-tab label="Tab 1">
+    <app-books-list></app-books-list>
+  </md-tab>
+  <md-tab label="Tab 2">
+    <app-counter></app-counter>
+  </md-tab>
+</md-tab-group>

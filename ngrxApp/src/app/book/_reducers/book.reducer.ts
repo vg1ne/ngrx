@@ -16,6 +16,13 @@ export function bookReducer(state = [], action: BookActions.All){
       return state.filter(book => book.id!==action.payload.id)
     case BookActions.INIT_ALL_BOOKS:
       return state.concat(state, action.payload)
+    case BookActions.BUY_BOOK:
+      return state.map((item => {
+        if(item.id == action.payload.id){
+          item.count--
+        }
+        return item;
+      }))
     default:
       return state;
   }

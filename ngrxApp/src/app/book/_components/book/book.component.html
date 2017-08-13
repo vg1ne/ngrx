@@ -7,6 +7,6 @@
     <label>Price: {{book.price}}</label>
   </md-card-content>
   <md-card-actions>
-    <button md-button>Buy</button>
+    <button md-raised-button [disabled]="isBuyDisabled" (click)="buyBook($event)">Buy</button>
   </md-card-actions>
 </md-card>

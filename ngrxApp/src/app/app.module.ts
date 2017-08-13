@@ -5,6 +5,8 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {Actions} from '@ngrx/effects';
 import {StoreDevtoolsModule} from '@ngrx/store-devtools';
 
+import {MdTabsModule} from '@angular/material';
+
 import {AppComponent} from './app.component';
 import {CounterModule} from "./counter/counter.module"
 import {BookModule} from "./book/book.module"
@@ -17,6 +19,8 @@ import {BookModule} from "./book/book.module"
     BrowserModule,
     FormsModule,
     BrowserAnimationsModule,
+
+    MdTabsModule,
 
     StoreDevtoolsModule.instrument({
       maxAge: 20

@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import {MdCardModule} from '@angular/material';
+import {MdButtonModule} from '@angular/material';
 
 import {EffectsModule} from "@ngrx/effects";
 import {StoreModule} from "@ngrx/store";
@@ -14,6 +15,7 @@ import { BooksListComponent } from './_components/books-list/books-list.componen
   imports: [
     CommonModule,
     MdCardModule,
+    MdButtonModule,
     StoreModule.forRoot({books: bookReducer})
   ],
   declarations: [BookComponent, BooksListComponent],

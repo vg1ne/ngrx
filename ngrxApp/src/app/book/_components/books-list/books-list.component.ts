@@ -3,7 +3,7 @@ import { Books} from "../../books";
 import {Store, StoreModule} from "@ngrx/store";
 import {Book} from "../../_models/book.model";
 import {Observable} from "rxjs/Observable";
-import {INIT_ALL_BOOKS, InitAll} from "../../_actions/book.actions"
+import {AddBook, BuyBook, INIT_ALL_BOOKS, InitAll} from "../../_actions/book.actions"
 
 interface BooksStore {
   books: Book[]
@@ -21,8 +21,11 @@ export class BooksListComponent implements OnInit {
     this.store.dispatch(new InitAll(Books))
     this.books = store.select('books')
   }
-
+  onBuy(book: Book){
+    this.store.dispatch(new BuyBook(book))
+  }
   ngOnInit() {
+    console.log('books list inited')
 
   }
 
