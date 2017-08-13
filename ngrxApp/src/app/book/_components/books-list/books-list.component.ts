@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { Books} from "../../books";
-import {Store, StoreModule} from "@ngrx/store";
+import {Store} from "@ngrx/store";
 import {Book} from "../../_models/book.model";
 import {Observable} from "rxjs/Observable";
-import {AddBook, BuyBook, INIT_ALL_BOOKS, InitAll} from "../../_actions/book.actions"
+import {BuyBook, InitAll} from "../../_actions/book.actions"
 
-interface BooksStore {
+export interface BooksStore {
   books: Book[]
 }
 
