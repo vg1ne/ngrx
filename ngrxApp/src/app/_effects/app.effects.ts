@@ -18,4 +18,3 @@ export class AppEffects {
     })
   constructor(private actions$: Actions){}
 }
-
