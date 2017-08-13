@@ -3,7 +3,7 @@ import {Observable} from "rxjs/Observable";
 import {Store} from "@ngrx/store"
 import * as CounterActions from "../../_actions/counter"
 
-interface CounterState {
+export interface CounterStore {
   counter: number;
 }
 
@@ -16,7 +16,7 @@ export class CounterComponent {
   counter: Observable<number>
   incrementStep: number
 
-  constructor(private  store: Store<CounterState>){
+  constructor(private  store: Store<CounterStore>){
     this.counter = store.select('counter')
     this.incrementStep = 10;
   }
