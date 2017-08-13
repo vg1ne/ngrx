@@ -13,7 +13,7 @@ export class AppEffects {
   @Effect({dispatch: false}) selectTab$ = this.actions$
     .ofType(ADD_BOOK)
     .map(action => action['payload'])
-    .do(payload => {
+    .map(payload => {
         this.appStore.dispatch(new SelectTab(0))
     })
 
