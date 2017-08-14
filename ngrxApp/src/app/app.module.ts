@@ -10,7 +10,7 @@ import {SharedModule} from "./shared/shared.module"
 import {AppComponent} from './app.component';
 import {BookModule} from "./book/book.module"
 
-import { StoreRouterConnectingModule, routerReducer } from '@ngrx/router-store';
+import {StoreRouterConnectingModule, routerReducer} from '@ngrx/router-store';
 import {StoreModule} from "@ngrx/store";
 
 import {bookReducer} from "./book/_reducers/book.reducer";
@@ -18,7 +18,7 @@ import {BookEffect} from "./book/_effects/book.effect";
 import {RouterModule, Routes} from "@angular/router";
 import {BooksListComponent} from "./book/_components/books-list/books-list.component";
 import {BooksEditComponent} from "./book/_components/books-edit/books-edit.component";
-import { BookBasketComponent } from './book-basket/book-basket.component';
+import {BookBasketComponent} from './book-basket/book-basket.component';
 
 const appRoutes: Routes = [
   {path: '', redirectTo: '/books', pathMatch: 'full'},
