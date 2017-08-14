@@ -2,6 +2,7 @@
   <app-book
     *ngFor="let book of books | async"
     [book]="book"
-    (buy)="onBuy($event)">
+    (buy)="onBuy($event)"
+    (remove)="onRemove($event)">
   </app-book>
 </section>

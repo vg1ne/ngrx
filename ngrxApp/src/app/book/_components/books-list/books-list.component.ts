@@ -3,7 +3,7 @@ import { Books} from "../../books";
 import {Store} from "@ngrx/store";
 import {Book} from "../../_models/book.model";
 import {Observable} from "rxjs/Observable";
-import {BuyBook, InitAll} from "../../_actions/book.actions"
+import {BuyBook, InitAll, RemoveBook} from "../../_actions/book.actions"
 
 export interface BooksStore {
   books: Book[]
@@ -23,6 +23,9 @@ export class BooksListComponent implements OnInit {
   }
   onBuy(book: Book){
     this.store.dispatch(new BuyBook(book))
+  }
+  onRemove(book: Book){
+    this.store.dispatch(new RemoveBook(book))
   }
   ngOnInit() {
 

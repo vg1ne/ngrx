@@ -10,10 +10,14 @@ import {Book} from "../../_models/book.model"
 export class BookComponent {
   @Input() book: Book
   @Output() buy: EventEmitter<Book> = new EventEmitter()
+  @Output() remove: EventEmitter<Book> = new EventEmitter()
   constructor(){
   }
   buyBook(){
     this.buy.emit(this.book)
+  }
+  removeBook(){
+    this.remove.emit(this.book)
   }
   get isBuyDisabled(){
     return this.book.count<1
