@@ -18,16 +18,19 @@ import {BookEffect} from "./book/_effects/book.effect";
 import {RouterModule, Routes} from "@angular/router";
 import {BooksListComponent} from "./book/_components/books-list/books-list.component";
 import {BooksEditComponent} from "./book/_components/books-edit/books-edit.component";
+import { BookBasketComponent } from './book-basket/book-basket.component';
 
 const appRoutes: Routes = [
   {path: '', redirectTo: '/books', pathMatch: 'full'},
   {path: 'books', component: BooksListComponent},
-  {path: 'book-add', component: BooksEditComponent}
+  {path: 'book-add', component: BooksEditComponent},
+  {path: 'book-basket', component: BookBasketComponent}
 ];
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    BookBasketComponent
   ],
   imports: [
     BrowserModule,
