@@ -1,11 +1,19 @@
 <md-card>
-  <button (click)="increment()">Increment</button>
-  <div>Current Count: {{ counter | async }}</div>
-  <button (click)="decrement()">Decrement</button>
+  <md-card-title>
+    <div>Current Count: {{ counter | async }}</div>
+  </md-card-title>
 
-  <button (click)="reset()">Reset Counter</button>
-  <button (click)="incrementByArg()">Increment by {{incrementStep}}</button>
-  <br>
-  <label for="incrementStep">Increment step:</label>
-  <input [(ngModel)]="incrementStep" id="incrementStep"/>
+  <md-card-actions>
+    <button (click)="increment()" md-raised-button>Increment</button>
+
+    <button (click)="decrement()" md-raised-button>Decrement</button>
+
+    <button (click)="reset()" md-raised-button>Reset Counter</button>
+    <button (click)="incrementByArg()" md-raised-button>Increment by {{incrementStep}}</button>
+  </md-card-actions>
+
+  <md-input-container>
+    <input mdInput [(ngModel)]="incrementStep" id="incrementStep" placeholder="Increment step:" type="number"/>
+  </md-input-container>
+
 </md-card>

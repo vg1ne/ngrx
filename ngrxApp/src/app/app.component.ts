@@ -1,16 +1,17 @@
 import { Component } from '@angular/core';
-import {Action, Store} from "@ngrx/store";
+import {Store} from "@ngrx/store";
 import {SelectTab} from "./_actions/user.actions";
 import {Observable} from "rxjs/Observable";
-import {Subject} from "rxjs/Subject";
 import {BooksStore} from "./book/_components/books-list/books-list.component";
 import {CounterStore} from "./counter/_components/counter/counter.component"
 
-export class AppStore{
-  app: {
-    selectedTab: number
-  };
-  counter: Store<CounterStore>;
+export interface AppStore{
+  selectedTab: number
+}
+
+export class MainStore{
+  app: AppStore
+  counter: Store<CounterStore>
   book: Store<BooksStore>
 }
 
@@ -21,9 +22,9 @@ export class AppStore{
 })
 export class AppComponent {
   selectedTab$: Observable<number>
-  appStore: Store<AppStore>
+  appStore: Store<MainStore>
 
-  constructor(store: Store<AppStore>){
+  constructor(store: Store<MainStore>){
     this.appStore = store
     this.selectedTab$ = store.select(state => state.app.selectedTab)
     store.dispatch(new SelectTab(0))

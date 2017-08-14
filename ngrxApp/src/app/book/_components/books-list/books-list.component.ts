@@ -25,7 +25,6 @@ export class BooksListComponent implements OnInit {
     this.store.dispatch(new BuyBook(book))
   }
   ngOnInit() {
-    console.log('books list inited')
 
   }
 

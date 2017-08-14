@@ -1,11 +1,11 @@
+import { NgModule } from '@angular/core';
+
 import {BrowserModule} from '@angular/platform-browser';
-import {NgModule} from '@angular/core';
-import {FormsModule} from "@angular/forms"
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {Actions, EffectsModule} from '@ngrx/effects';
 import {StoreDevtoolsModule} from '@ngrx/store-devtools';
 
-import {MdTabsModule} from '@angular/material';
+import {SharedModule} from "./shared/shared/shared.module"
 
 import {AppComponent} from './app.component';
 import {CounterModule} from "./counter/counter.module"
@@ -24,10 +24,8 @@ import {BookEffect} from "./book/_effects/book.effect";
   ],
   imports: [
     BrowserModule,
-    FormsModule,
     BrowserAnimationsModule,
-
-    MdTabsModule,
+    SharedModule,
 
     StoreModule.forRoot({
       app: userActionsReducer,
