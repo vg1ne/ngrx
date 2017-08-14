@@ -1,6 +1,6 @@
 import {NgModule} from '@angular/core';
 
-import {SharedModule} from "../shared/shared/shared.module";
+import {SharedModule} from "../shared/shared.module";
 
 import {EffectsModule} from "@ngrx/effects";
 import {StoreModule} from "@ngrx/store";
