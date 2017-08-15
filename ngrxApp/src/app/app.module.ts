@@ -20,6 +20,8 @@ import {BooksListComponent} from "./book/_components/books-list/books-list.compo
 import {BooksEditComponent} from "./book/_components/books-edit/books-edit.component";
 import {BookBasketComponent} from './book-basket/book-basket.component';
 
+import {BooksService} from "./books.service"
+
 const appRoutes: Routes = [
   {path: '', redirectTo: '/books', pathMatch: 'full'},
   {path: 'books', component: BooksListComponent},
@@ -49,7 +51,8 @@ const appRoutes: Routes = [
     BookModule
   ],
   providers: [
-    Actions
+    Actions,
+    BooksService
   ],
   bootstrap: [AppComponent]
 })
