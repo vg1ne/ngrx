@@ -20,8 +20,6 @@ export class AppComponent implements OnInit{
     this.appStore = store
   }
   ngOnInit(){
-    this.booksService.getAllPosts().subscribe(posts => {
-      // console.log('posts received')
-    })
+
   }
 }

@@ -12,7 +12,7 @@ export function bookReducer(state = [], action: BookActions.All){
           count: action.payload.count?action.payload.count:3
         })
       ];
-    case BookActions.REMOVE_BOOK:
+    case BookActions.DELETE_BOOK:
       return state.filter(book => book.id!==action.payload.id)
     case BookActions.INIT_ALL_BOOKS:
       if(state.length) return state

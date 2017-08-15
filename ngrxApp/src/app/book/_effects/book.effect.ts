@@ -1,7 +1,7 @@
-import {Actions, Effect, toPayload} from "@ngrx/effects"
+import {Actions, Effect} from "@ngrx/effects"
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/do';
-import {ADD_BOOK} from '../_actions/book.actions'
+import {ADD_BOOK, DELETE_BOOK} from '../_actions/book.actions'
 import {Injectable} from "@angular/core";
 import {Observable} from "rxjs/Observable";
 import "rxjs/add/observable/of";
@@ -19,7 +19,14 @@ export class BookEffect {
       return Observable.of({type: action.type, payload: action['payload']})
     })
 
-
+  @Effect({dispatch: false}) bookRemove = this.actions$
+    .ofType(DELETE_BOOK)
+    .switchMap(action => {
+      this.booksService
+        .deleteBook(action['payload'])
+        .subscribe()
+      return Observable.of({type: action.type, payload: action['payload']})
+    })
 
   constructor(private actions$: Actions,
               private booksService: BooksService){}

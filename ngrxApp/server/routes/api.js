@@ -28,11 +28,21 @@ router
       if (err) throw err;
       res.status(200).send({data: books});
     });
-  }).post('/books', (req, res) => {
-    console.log(req.body)
+  })
+  .post('/books', (req, res) => {
     addBook(req.body)
-  res.status(200).send();
-});
+    res.status(200).send();
+  })
+  .delete('/books', (req, res) => {
+    Book.remove({_id: req.query.id},
+      function(err, bear) {
+        if (err)
+          res.send(err);
+
+        res.status(200).send();
+      })
+  });
+
 module.exports = router;
 
 function addBook(book) {
