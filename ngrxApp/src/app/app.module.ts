@@ -10,7 +10,6 @@ import {SharedModule} from "./shared/shared.module"
 import {AppComponent} from './app.component';
 import {BookModule} from "./book/book.module"
 
-import {StoreRouterConnectingModule, routerReducer} from '@ngrx/router-store';
 import {StoreModule} from "@ngrx/store";
 
 import {bookReducer} from "./book/_reducers/book.reducer";

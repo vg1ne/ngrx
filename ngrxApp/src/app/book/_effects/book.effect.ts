@@ -6,18 +6,22 @@ import {Injectable} from "@angular/core";
 import {Observable} from "rxjs/Observable";
 import "rxjs/add/observable/of";
 import "rxjs/add/operator/switchMap";
+import { BooksService} from "../../books.service"
 
 @Injectable()
 export class BookEffect {
   @Effect({dispatch: false}) bookAdd$ = this.actions$
     .ofType(ADD_BOOK)
-    .do(action => {console.log(action)})
     .switchMap(action => {
+      this.booksService
+        .addBook(action['payload'])
+        .subscribe()
       return Observable.of({type: action.type, payload: action['payload']})
     })
 
 
 
-  constructor(private actions$: Actions){}
+  constructor(private actions$: Actions,
+              private booksService: BooksService){}
 }
 

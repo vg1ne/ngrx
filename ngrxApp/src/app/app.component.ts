@@ -21,7 +21,7 @@ export class AppComponent implements OnInit{
   }
   ngOnInit(){
     this.booksService.getAllPosts().subscribe(posts => {
-      console.log('posts received')
+      // console.log('posts received')
     })
   }
 }
