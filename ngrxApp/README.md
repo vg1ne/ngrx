@@ -40,3 +40,4 @@ https://gist.github.com/btroncone/a6e4347326749f938510#people-reducer
 https://scotch.io/tutorials/mean-app-with-angular-2-and-the-angular-cli
 
 1) To start mongo go to C:\Program Files\MongoDB\server\3.4\bin and run 'mongod.exe'
+2) About mongoose https://scotch.io/tutorials/using-mongoosejs-in-node-js-and-mongodb-applications
