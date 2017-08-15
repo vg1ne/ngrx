@@ -19,7 +19,6 @@ export class BooksEditComponent implements OnInit {
   addBook($event){
     this.store.dispatch(new AddBook(
       {
-        id: Math.random(),
         name: this.name,
         price: +this.price,
         count: +this.count

@@ -1,7 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {Store} from "@ngrx/store";
 import {BooksStore} from "./book/_components/books-list/books-list.component";
-import {BooksService} from "./books.service"
 
 export class MainStore{
   books: Store<BooksStore>
@@ -15,8 +14,7 @@ export class MainStore{
 export class AppComponent implements OnInit{
   appStore: Store<MainStore>
 
-  constructor(store: Store<MainStore>,
-              private booksService: BooksService){
+  constructor(store: Store<MainStore>){
     this.appStore = store
   }
   ngOnInit(){

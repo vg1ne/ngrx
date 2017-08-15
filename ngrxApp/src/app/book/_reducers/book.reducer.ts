@@ -6,20 +6,19 @@ export function bookReducer(state = [], action: BookActions.All){
       return [...state, Object.assign(
         {},
         {
-          id: action.payload.id,
           name: action.payload.name,
           price: action.payload.price?action.payload.price:20,
           count: action.payload.count?action.payload.count:3
         })
       ];
     case BookActions.DELETE_BOOK:
-      return state.filter(book => book.id!==action.payload.id)
+      return state.filter(book => book._id!==action.payload._id)
     case BookActions.INIT_ALL_BOOKS:
       if(state.length) return state
       return state.concat(state, action.payload)
     case BookActions.BUY_BOOK:
       return state.map((item => {
-        if(item.id == action.payload.id){
+        if(item.id == action.payload._id){
           item.count--
         }
         return item;
