@@ -8,7 +8,7 @@ export class BooksService {
   constructor(private http: Http) { }
 
   getAllPosts(){
-    return this.http.get('/api/posts')
+    return this.http.get('/api/books')
       .map(res=>res.json())
   }
 }

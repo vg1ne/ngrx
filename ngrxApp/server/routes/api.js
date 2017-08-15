@@ -1,34 +1,33 @@
 const express = require('express');
 const router = express.Router();
 
-// declare axios for making http requests
-const axios = require('axios');
-const API = 'https://jsonplaceholder.typicode.com';
+const mongoose = require('mongoose')
 
-/* GET api listing. */
+mongoose.Promise = global.Promise;
+mongoose.connect('mongodb://localhost:27017/ngrxApp');
+
+var Book = require('../../server/models/book.model');
+
+var tarzan = new Book({
+  name: 'Chris',
+  price: 123,
+  count: 14
+});
+
+tarzan.save(function(err) {
+  if (err) throw err;
+  console.log('tarzan book saved successfully!');
+});
+
+
 router.get('/', (req, res) => {
   res.send('api works');
 });
 
-// Get all posts
-router.get('/posts', (req, res) => {
-  // Get posts from the mock api
-  // This should ideally be replaced with a service that connects to MongoDB
-  axios.get(`${API}/posts`)
-    .then(posts => {
-      res.status(200).json(posts.data);
-    })
-    .catch(error => {
-      res.status(500).send(error)
-    });
-});
-router.get('/users', (req, res) => {
-  axios.get(`${API}/users`)
-    .then(users => {
-      res.status(200).json(users.data);
-    })
-    .catch(error => {
-      res.status(500).send(error)
-    });
+router.get('/books', (req, res) => {
+  Book.find({}, function(err, books) {
+    if (err) throw err;
+    res.status(200).send({data: books});
+  });
 });
 module.exports = router;
