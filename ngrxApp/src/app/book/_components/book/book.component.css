@@ -1,6 +1,8 @@
 :host{
   display: flex;
   flex-grow: 1;
+  flex-basis: 25%;
+  margin: 0 10px 10px 10px;
 }
 :host md-card{
   width: 100%;

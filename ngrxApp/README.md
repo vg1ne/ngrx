@@ -42,3 +42,9 @@ https://scotch.io/tutorials/mean-app-with-angular-2-and-the-angular-cli
 1) To start mongo go to C:\Program Files\MongoDB\server\3.4\bin and run 'mongod.exe'
 2) About mongoose https://scotch.io/tutorials/using-mongoosejs-in-node-js-and-mongodb-applications
 3) Feliks example to read https://github.com/feliksmatsko/server-starter/blob/master/www/app.js
+
+
+##MongoDB
+1) Add PATH of mongodb...\bin to system variables
+2) For export collection run: "mongoexport -d {databaseName} -c {collectionName} -o {destination.json}
+3) For import collection run: "mongoimport -d {databaseName} -c {collectionName} {destination.json}

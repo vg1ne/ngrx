@@ -1,0 +1,10 @@
+{"_id":{"$oid":"599332d08e5f4d10d01d0cd0"},"name":"Professional Javascript","price":12,"count":13,"__v":0}
+{"_id":{"$oid":"599332e88e5f4d10d01d0cd1"},"name":"Javascript Patterns","price":100,"count":45,"__v":0}
+{"_id":{"$oid":"599333bb9e3f181a94043217"},"name":"Private lessons","price":122,"count":54}
+{"_id":{"$oid":"599335679e3f181a94043218"},"name":"Javascript \u0026 jQuery","price":1000,"count":45,"__v":0}
+{"_id":{"$oid":"5993357c9e3f181a94043219"},"name":"AngularJS","price":50,"count":34,"__v":0}
+{"_id":{"$oid":"599335909e3f181a9404321a"},"name":"Angular 2 Book","price":130,"count":56,"__v":0}
+{"_id":{"$oid":"599335b39e3f181a9404321b"},"name":"Knockout in Future","price":100,"count":45,"__v":0}
+{"_id":{"$oid":"599335c19e3f181a9404321c"},"name":"MEAN Stack","price":100,"count":45,"__v":0}
+{"_id":{"$oid":"599335dc9e3f181a9404321d"},"name":"HTTP in practice","price":59,"count":100,"__v":0}
+{"_id":{"$oid":"599335fb9e3f181a9404321e"},"name":"Software Engineering","price":70,"count":30,"__v":0}

@@ -1,4 +1,6 @@
 :host>section{
+  padding-top: 20px;
   display: flex;
   flex-direction: row;
+  flex-flow: row wrap;
 }
