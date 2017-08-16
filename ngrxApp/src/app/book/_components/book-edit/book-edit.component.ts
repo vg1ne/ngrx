@@ -35,7 +35,10 @@ export class BookEditComponent {
 
     this.filteredBooks$ = this.bookFormControl.valueChanges
       .startWith(null)
-      .map(name => this.filterBooks(name));
+      .map((book) => {
+        book && typeof book === 'object' ? book.name: book
+      })
+      .map((book) => this.filterBooks(name));
 
   }
 
@@ -44,5 +47,8 @@ export class BookEditComponent {
 
     return this.books
       .filter(book => book.name.toLowerCase().indexOf(this.bookFormControl.value.toLowerCase()) === 0)
+  }
+  displayFn(book: Book){
+    return book ? book.name : book
   }
 }
