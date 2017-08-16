@@ -17,7 +17,7 @@ import {BookEffect} from "./book/_effects/book.effect";
 import {RouterModule, Routes} from "@angular/router";
 import {BooksListComponent} from "./book/_components/books-list/books-list.component";
 import {BookAddComponent} from "./book/_components/book-add/book-add.component";
-import {BookBasketComponent} from './book-basket/book-basket.component';
+import {BookBasketComponent} from './book/_components/book-basket/book-basket.component';
 
 import {BooksService} from "./books.service"
 import {BookEditComponent} from "./book/_components/book-edit/book-edit.component";

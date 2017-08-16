@@ -1,0 +1,14 @@
+<md-input-container>
+  <input mdInput placeholder="Book" [mdAutocomplete]="auto" [formControl]="bookFormControl">
+</md-input-container>
+
+<md-autocomplete #auto="mdAutocomplete">
+  <md-option *ngFor="let book of filteredBooks$ | async" [value]="book.name">
+    {{ book.name }}
+  </md-option>
+</md-autocomplete>
+<!--<ul>-->
+  <!--<li *ngFor="let book of books | async">-->
+    <!--{{book.name}}-->
+  <!--</li>-->
+<!--</ul>-->
