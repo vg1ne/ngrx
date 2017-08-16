@@ -3,6 +3,8 @@ import {CommonModule} from '@angular/common';
 import {FormsModule, ReactiveFormsModule } from "@angular/forms"
 import { HttpModule } from '@angular/http';
 
+import {FlexLayoutModule} from '@angular/flex-layout'
+
 import {MdTabsModule} from '@angular/material';
 import {MdCardModule} from '@angular/material';
 import {MdButtonModule} from '@angular/material';
@@ -15,6 +17,8 @@ import {MdAutocompleteModule} from '@angular/material';
     FormsModule,
     HttpModule,
 
+    FlexLayoutModule,
+
     MdTabsModule,
     MdCardModule,
     MdButtonModule,
@@ -25,6 +29,7 @@ import {MdAutocompleteModule} from '@angular/material';
   exports: [
     CommonModule,
     FormsModule,
+    FlexLayoutModule,
     ReactiveFormsModule,
     MdTabsModule,
     MdCardModule,

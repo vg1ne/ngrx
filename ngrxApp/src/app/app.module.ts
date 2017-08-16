@@ -12,7 +12,7 @@ import {BookModule} from "./book/book.module"
 
 import {StoreModule} from "@ngrx/store";
 
-import {bookReducer} from "./book/_reducers/book.reducer";
+import {bookReducer} from "./book/_reducers/books.reducer";
 import {BookEffect} from "./book/_effects/book.effect";
 import {RouterModule, Routes} from "@angular/router";
 import {BooksListComponent} from "./book/_components/books-list/books-list.component";
@@ -21,6 +21,7 @@ import {BookBasketComponent} from './book/_components/book-basket/book-basket.co
 
 import {BooksService} from "./books.service"
 import {BookEditComponent} from "./book/_components/book-edit/book-edit.component";
+import {selectedBookReducer} from "./book/_reducers/selected-book.reducer";
 
 const appRoutes: Routes = [
   {path: '', redirectTo: '/books', pathMatch: 'full'},
@@ -43,7 +44,8 @@ const appRoutes: Routes = [
     RouterModule.forRoot(appRoutes),
 
     StoreModule.forRoot({
-      books: bookReducer
+      books: bookReducer,
+      selectedBook: selectedBookReducer
     }),
     EffectsModule.forRoot([BookEffect]),
     StoreDevtoolsModule.instrument({

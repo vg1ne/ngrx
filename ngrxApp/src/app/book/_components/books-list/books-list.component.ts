@@ -6,7 +6,8 @@ import {BuyBook, InitAll, DeleteBook} from "../../_actions/book.actions"
 import {BooksService} from "../../../books.service";
 
 export interface BooksStore {
-  books: Book[]
+  books: Book[],
+  selectedBook: Book
 }
 
 @Component({
