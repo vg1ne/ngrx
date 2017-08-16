@@ -33,6 +33,10 @@ router
     addBook(req.body)
     res.status(200).send();
   })
+  .put('/books', (req, res) => {
+    Book.findByIdAndUpdate(req.body._id, req.body)
+    res.status(200).send();
+  })
   .delete('/books', (req, res) => {
     Book.remove({_id: req.query.id},
       function(err, bear) {

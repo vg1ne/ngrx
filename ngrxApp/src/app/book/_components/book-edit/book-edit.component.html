@@ -11,13 +11,7 @@
     </md-autocomplete>
   </div>
   <div fxFlex="50%">
-    <!--TODO: add another component for this-->
-    <app-book
-      *ngIf="selectedBook$ | async"
-      [book]="selectedBook$ | async"
-              (buy)="onBuy($event)"
-              (remove)="onRemove($event)"></app-book>
+    <app-book-editable [book]="selectedBook$ | async" (updateBook)="updateBook($event)"></app-book-editable>
   </div>
-
 </section>
 

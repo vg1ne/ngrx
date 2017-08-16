@@ -23,6 +23,13 @@ export function bookReducer(state = [], action: BookActions.All){
         }
         return item;
       }))
+    case BookActions.UPDATE_BOOK:
+      let index = state.map(book => book._id).indexOf(action.payload._id);
+      return [
+        ...state.slice(0, index),
+        Object.assign({}, action.payload),
+        ...state.slice(index + 1)
+      ]
     default:
       return state;
   }

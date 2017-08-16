@@ -48,3 +48,6 @@ https://scotch.io/tutorials/mean-app-with-angular-2-and-the-angular-cli
 1) Add PATH of mongodb...\bin to system variables
 2) For export collection run: "mongoexport -d {databaseName} -c {collectionName} -o {destination.json}
 3) For import collection run: "mongoimport -d {databaseName} -c {collectionName} {destination.json}
+
+
+http://netmedia.io/blog/angular-architecture-patterns-high-level-project-architecture_5589

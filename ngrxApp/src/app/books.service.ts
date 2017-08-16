@@ -22,4 +22,10 @@ export class BooksService {
       this.api + "/?id=" + book._id
     )
   }
+  updateBook(book: Book){
+    return this.http.put(
+      this.api,
+      book
+    )
+  }
 }

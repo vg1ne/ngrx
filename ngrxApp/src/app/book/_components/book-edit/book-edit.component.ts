@@ -4,7 +4,7 @@ import {Book} from "../../_models/book.model";
 import {Store} from "@ngrx/store";
 import {BooksStore} from "../books-list/books-list.component";
 import {BooksService} from "../../../books.service";
-import {InitAll, SelectBook} from "../../_actions/book.actions";
+import {InitAll, SelectBook, UpdateBook} from "../../_actions/book.actions";
 import {FormControl} from '@angular/forms';
 import "rxjs";
 
@@ -54,5 +54,8 @@ export class BookEditComponent {
 
   selectOption(book:Book){
     this.store.dispatch(new SelectBook(book))
+  }
+  updateBook(book:Book){
+    this.store.dispatch(new UpdateBook(book))
   }
 }
