@@ -1,21 +1,21 @@
-<form name="bookForm">
+<form name="bookForm" #bookForm="ngForm">
   <h2>Here you can add a new book:</h2>
   <div class="form-row">
     <md-input-container>
-      <input mdInput name="name" [(ngModel)]="name" placeholder="Book name:">
+      <input required mdInput name="name" [(ngModel)]="name" placeholder="Book name:">
     </md-input-container>
   </div>
   <div class="form-row">
     <md-input-container>
-      <input mdInput name="price" [(ngModel)]="price" placeholder="Price:" type="number">
+      <input required mdInput name="price" [(ngModel)]="price" placeholder="Price:" type="number">
     </md-input-container>
   </div>
   <div class="form-row">
 
     <md-input-container>
-      <input mdInput name="count" [(ngModel)]="count" placeholder="Book count:" type="number">
+      <input required mdInput name="count" [(ngModel)]="count" placeholder="Book count:" type="number">
     </md-input-container>
 
   </div>
-  <button md-raised-button (click)="addBook($event)" type="button">Add Book</button>
+  <button md-raised-button [disabled]="bookForm.invalid" (click)="addBook($event)" type="button">Add Book</button>
 </form>
