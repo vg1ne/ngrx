@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {Http, RequestOptions} from "@angular/http";
+import {Http} from "@angular/http";
 import {Book} from "./book/_models/book.model";
 
 

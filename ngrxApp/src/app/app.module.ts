@@ -16,15 +16,17 @@ import {bookReducer} from "./book/_reducers/book.reducer";
 import {BookEffect} from "./book/_effects/book.effect";
 import {RouterModule, Routes} from "@angular/router";
 import {BooksListComponent} from "./book/_components/books-list/books-list.component";
-import {BooksEditComponent} from "./book/_components/books-edit/books-edit.component";
+import {BookAddComponent} from "./book/_components/book-add/book-add.component";
 import {BookBasketComponent} from './book-basket/book-basket.component';
 
 import {BooksService} from "./books.service"
+import {BookEditComponent} from "./book/_components/book-edit/book-edit.component";
 
 const appRoutes: Routes = [
   {path: '', redirectTo: '/books', pathMatch: 'full'},
   {path: 'books', component: BooksListComponent},
-  {path: 'book-add', component: BooksEditComponent},
+  {path: 'book-add', component: BookAddComponent},
+  {path: 'book-edit', component: BookEditComponent},
   {path: 'book-basket', component: BookBasketComponent}
 ];
 

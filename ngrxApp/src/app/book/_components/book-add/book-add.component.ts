@@ -7,10 +7,10 @@ import {Observable} from "rxjs/Observable";
 
 @Component({
   selector: 'app-books-edit',
-  templateUrl: './books-edit.component.html',
-  styleUrls: ['./books-edit.component.css']
+  templateUrl: './book-add.component.html',
+  styleUrls: ['./book-add.component.css']
 })
-export class BooksEditComponent implements OnInit {
+export class BookAddComponent implements OnInit {
   constructor(private store: Store<BooksStore>) {
   }
 
