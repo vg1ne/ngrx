@@ -55,3 +55,4 @@ https://github.com/Paldom/angular2-rest
 http://netmedia.io/blog/angular-architecture-patterns-high-level-project-architecture_5589
 later: http://blog.brecht.io/components-demystified/
        https://codility.com/programmers/lessons/1-iterations/
+TODO: provide sandbox for books store
