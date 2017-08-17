@@ -52,3 +52,4 @@ https://scotch.io/tutorials/mean-app-with-angular-2-and-the-angular-cli
 
 http://netmedia.io/blog/angular-architecture-patterns-high-level-project-architecture_5589
 later: http://blog.brecht.io/components-demystified/
+       https://codility.com/programmers/lessons/1-iterations/
