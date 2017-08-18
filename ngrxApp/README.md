@@ -55,4 +55,7 @@ https://github.com/Paldom/angular2-rest
 http://netmedia.io/blog/angular-architecture-patterns-high-level-project-architecture_5589
 later: http://blog.brecht.io/components-demystified/
        https://codility.com/programmers/lessons/1-iterations/
+       https://netbasal.com/querying-a-normalized-state-with-rxjs-in-angular-71ecd7ca25b4
+       https://angular-2-training-book.rangle.io/handout/state-management/ngrx/actions.html
+take books here: https://scanlibs.com/nocategory/page/7/
 TODO: provide sandbox for books store
