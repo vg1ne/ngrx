@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import {Store} from "@ngrx/store";
 import {BooksStore} from "../books-list/books-list.component"
 import {Book} from "../../_models/book.model"
@@ -10,26 +10,23 @@ import {Observable} from "rxjs/Observable";
   templateUrl: './book-add.component.html',
   styleUrls: ['./book-add.component.css']
 })
-export class BookAddComponent implements OnInit {
+export class BookAddComponent {
   constructor(private store: Store<BooksStore>) {
   }
 
-  ngOnInit() {
-  }
-  addBook($event){
+  addBook(){
     this.store.dispatch(new AddBook(
       {
-        name: this.name,
-        price: +this.price,
-        count: +this.count
+        name: this.book.name,
+        price: +this.book.price,
+        count: +this.book.count
       }
     ))
-    this.name = ''
-    this.price = ''
-    this.count = ''
+    this.clearBook()
+  }
+  clearBook(){
+    this.book = new Book()
   }
   books: Observable<Book[]>
-  name: string;
-  price: string;
-  count: string;
+  book: Book = new Book()
 }

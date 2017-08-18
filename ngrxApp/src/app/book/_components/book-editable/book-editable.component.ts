@@ -1,4 +1,4 @@
-import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {Component, EventEmitter, Input, Output} from '@angular/core';
 import {Book} from "../../_models/book.model";
 
 @Component({
@@ -6,13 +6,10 @@ import {Book} from "../../_models/book.model";
   templateUrl: './book-editable.component.html',
   styleUrls: ['./book-editable.component.css']
 })
-export class BookEditableComponent implements OnInit {
+export class BookEditableComponent {
   @Input() book: Book
   @Output() updateBook: EventEmitter<Book> = new EventEmitter()
   constructor() { }
-
-  ngOnInit() {
-  }
 
   update(){
     this.updateBook.emit(this.book)

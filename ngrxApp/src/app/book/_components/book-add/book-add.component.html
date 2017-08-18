@@ -2,18 +2,18 @@
   <h2>Here you can add a new book:</h2>
   <div class="form-row">
     <md-input-container>
-      <input required mdInput name="name" [(ngModel)]="name" placeholder="Book name:">
+      <input required mdInput name="name" [(ngModel)]="book.name" placeholder="Book name:">
     </md-input-container>
   </div>
   <div class="form-row">
     <md-input-container>
-      <input required mdInput name="price" [(ngModel)]="price" placeholder="Price:" type="number">
+      <input required mdInput name="price" [(ngModel)]="book.price" placeholder="Price:" type="number">
     </md-input-container>
   </div>
   <div class="form-row">
 
     <md-input-container>
-      <input required mdInput name="count" [(ngModel)]="count" placeholder="Book count:" type="number">
+      <input required mdInput name="count" [(ngModel)]="book.count" placeholder="Book count:" type="number">
     </md-input-container>
 
   </div>

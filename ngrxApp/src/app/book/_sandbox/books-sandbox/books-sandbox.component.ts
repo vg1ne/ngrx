@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import {InitAll} from "../../_actions/book.actions";
 import {BooksService} from "../../../books.service";
 import {Store} from "@ngrx/store";
@@ -8,21 +8,17 @@ import {Book} from "../../_models/book.model";
 
 @Component({
   selector: 'app-books-sandbox',
-  templateUrl: './books-sandbox.component.html',
-  styleUrls: ['./books-sandbox.component.css']
+  templateUrl: './books-sandbox.component.html'
 })
-export class BooksSandboxComponent implements OnInit {
+export class BooksSandboxComponent {
   books: Observable<Book[]>
   constructor(private store: Store<BooksStore>,
               private booksService: BooksService) {
-    const books = booksService
+
+    booksService
       .getAllBooks()
       .subscribe(res => {
         this.store.dispatch(new InitAll(res.data))
       })
   }
-
-  ngOnInit() {
-  }
-
 }

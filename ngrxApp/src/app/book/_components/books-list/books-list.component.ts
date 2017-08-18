@@ -1,9 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import {Store} from "@ngrx/store";
 import {Book} from "../../_models/book.model";
 import {Observable} from "rxjs/Observable";
-import {BuyBook, InitAll, DeleteBook} from "../../_actions/book.actions"
-import {BooksService} from "../../../books.service";
+import {BuyBook, DeleteBook} from "../../_actions/book.actions"
 
 export interface BooksStore {
   books: Book[],
@@ -15,16 +14,10 @@ export interface BooksStore {
   templateUrl: './books-list.component.html',
   styleUrls: ['./books-list.component.css']
 })
-export class BooksListComponent implements OnInit {
+export class BooksListComponent{
   books: Observable<Book[]>
 
-  constructor(private store: Store<BooksStore>,
-              private booksService: BooksService) {
-    const books = booksService
-      .getAllBooks()
-      .subscribe(res => {
-        this.store.dispatch(new InitAll(res.data))
-      })
+  constructor(private store: Store<BooksStore>) {
     this.books = store.select('books')
   }
   onBuy(book: Book){
@@ -33,8 +26,4 @@ export class BooksListComponent implements OnInit {
   onRemove(book: Book){
     this.store.dispatch(new DeleteBook(book))
   }
-  ngOnInit() {
-
-  }
-
 }
