@@ -3,7 +3,6 @@ import {Observable} from "rxjs/Observable";
 import {Book} from "../../_models/book.model";
 import {Store} from "@ngrx/store";
 import {BooksStore} from "../books-list/books-list.component";
-import {BooksService} from "../../../books.service";
 import {SelectBook, UpdateBook} from "../../_actions/book.actions";
 import {FormControl} from '@angular/forms';
 import "rxjs";
@@ -19,8 +18,7 @@ export class BookEditComponent {
   filteredBooks$: Observable<Book[]>
   selectedBook$: Observable<Book>
 
-  constructor(private store: Store<BooksStore>,
-              private booksService: BooksService) {
+  constructor(private store: Store<BooksStore>) {
     this.bookFormControl = new FormControl()
 
     const books$ = store.select('books')

@@ -59,14 +59,11 @@ export const selectBooksInBasket = createSelector(
   (state: Book[]) => state.filter(item => {
     return item.bought > 0
   }));
-// export const selectTotalPrice = createSelector(
-//   selectBooksFeature,
-//   (state: Book[]) => {
-//     const boughtBooks = state.filter(item => {
-//       return item.bought > 0
-//     })
-//     return boughtBooks.reduce((acc, book) => {
-//       return 1
-//     })
-//   });
+export const selectTotalPrice = createSelector(
+  selectBooksFeature,
+  (state: Book[]) => {
+    return state.reduce((acc, book)=> {
+      return acc + (book['bought'] * book['price'])
+    }, 0)
+  });
 

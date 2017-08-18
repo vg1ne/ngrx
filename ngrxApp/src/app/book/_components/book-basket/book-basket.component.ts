@@ -3,7 +3,7 @@ import {BooksStore} from "../books-list/books-list.component";
 import {Store} from "@ngrx/store";
 import {Observable} from "rxjs/Observable";
 import {Book} from "../../_models/book.model";
-import {selectBooksInBasket} from "../../_reducers/books.reducer";
+import {selectBooksInBasket, selectTotalPrice} from "../../_reducers/books.reducer";
 import {RemoveFromBasket} from "../../_actions/book.actions";
 
 @Component({
@@ -21,13 +21,7 @@ export class BookBasketComponent {
     this.store$ = store
     this.books$ = store.select(selectBooksInBasket)
 
-    this.totalPrice$ = this
-      .books$
-      .map(books => {
-        return books.reduce((acc, book)=> {
-          return acc + (book['bought'] * book['price'])
-        }, 0)
-      })
+    this.totalPrice$ = store.select(selectTotalPrice)
   }
 
   removeFromBasket(book: Book){
