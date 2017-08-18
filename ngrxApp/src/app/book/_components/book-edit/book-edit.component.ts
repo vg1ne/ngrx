@@ -18,7 +18,7 @@ export class BookEditComponent {
   bookFormControl: FormControl;
   filteredBooks$: Observable<Book[]>
   selectedBook$: Observable<Book>
-  //TODO: fix on click selection of book
+
   constructor(private store: Store<BooksStore>,
               private booksService: BooksService) {
     this.bookFormControl = new FormControl()
@@ -43,7 +43,7 @@ export class BookEditComponent {
     if(!name) return this.books
 
     return this.books
-      .filter(book => book.name.toLowerCase().indexOf(this.bookFormControl.value.toLowerCase()) === 0)
+      .filter(book => book.name.toLowerCase().indexOf(name.toLowerCase()) === 0)
   }
   displayFn(book: Book){
     return book ? book.name : book
