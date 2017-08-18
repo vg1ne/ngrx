@@ -1,0 +1,13 @@
+<md-card class="book-component-card">
+  <md-card-header >
+    <md-card-title>{{book.name}}</md-card-title>
+  </md-card-header>
+  <md-card-content>
+    <label>Count: {{available}}</label><br>
+    <label>Price: {{book.price}}</label>
+  </md-card-content>
+  <md-card-actions>
+    <button md-raised-button [disabled]="isBuyDisabled" (click)="buyBook($event)">Buy</button>
+    <button md-raised-button (click)="removeBook($event)">Remove</button>
+  </md-card-actions>
+</md-card>

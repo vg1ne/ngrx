@@ -3,6 +3,7 @@ import {BooksStore} from "../books-list/books-list.component";
 import {Store} from "@ngrx/store";
 import {Observable} from "rxjs/Observable";
 import {Book} from "../../_models/book.model";
+import {selectBooksInBasket} from "../../_reducers/books.reducer";
 
 @Component({
   selector: 'app-book-basket',
@@ -10,10 +11,10 @@ import {Book} from "../../_models/book.model";
   styleUrls: ['./book-basket.component.css']
 })
 export class BookBasketComponent implements OnInit {
-  books: Observable<Book[]>
+  books$: Observable<Book[]>
 
   constructor(store: Store<BooksStore>) {
-    this.books = store.select('books')
+    this.books$ = store.select(selectBooksInBasket)
   }
 
   ngOnInit() {

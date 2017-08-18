@@ -1,4 +1,8 @@
 import * as BookActions from "../_actions/book.actions"
+import {BooksStore} from "../_components/books-list/books-list.component";
+import {Book} from "../_models/book.model";
+import { createSelector } from '@ngrx/store';
+import 'rxjs'
 
 export function bookReducer(state = [], action: BookActions.All){
   switch (action.type){
@@ -34,3 +38,10 @@ export function bookReducer(state = [], action: BookActions.All){
       return state;
   }
 }
+
+export const selectBooksFeature = (state: BooksStore) => state.books
+export const selectBooksInBasket = createSelector(selectBooksFeature,
+  (state: Book[]) => state.filter(item => {
+    return item.bought > 0
+  }));
+
