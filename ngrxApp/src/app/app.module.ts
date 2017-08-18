@@ -42,7 +42,8 @@ const appRoutes: Routes = [
     SharedModule,
 
     RouterModule.forRoot(appRoutes),
-
+    //TODO: move booksReducer to booksModule
+    //TODO: byId and allIds to structure
     StoreModule.forRoot({
       books: bookReducer,
       selectedBook: selectedBookReducer
