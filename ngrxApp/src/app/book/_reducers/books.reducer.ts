@@ -5,6 +5,7 @@ import { createSelector } from '@ngrx/store';
 import 'rxjs'
 
 export function bookReducer(state = [], action: BookActions.All){
+  let index;
   switch (action.type){
     case BookActions.ADD_BOOK:
       return [...state, Object.assign(
@@ -28,12 +29,25 @@ export function bookReducer(state = [], action: BookActions.All){
         return item;
       }))
     case BookActions.UPDATE_BOOK:
-      let index = state.map(book => book._id).indexOf(action.payload._id);
+      index = state.map(book => book._id).indexOf(action.payload._id);
       return [
         ...state.slice(0, index),
         Object.assign({}, action.payload),
         ...state.slice(index + 1)
       ]
+    case BookActions.REMOVE_BOOK_FROM_BASKET:
+      const basketBook:Book = state.find(book => book._id===action.payload)
+
+      if(basketBook){
+        index = state.indexOf(basketBook)
+        basketBook.bought = 0
+        return [
+          ...state.slice(0, index),
+          Object.assign({}, basketBook),
+          ...state.slice(index + 1)
+        ]
+      }
+      return state
     default:
       return state;
   }

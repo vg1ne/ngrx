@@ -7,6 +7,7 @@ export const INIT_ALL_BOOKS = '[Book] INIT_ALL_BOOKS'
 export const BUY_BOOK = '[Book] BUY_BOOK'
 export const SELECT_BOOK ='[Book] SELECT_BOOK'
 export const UPDATE_BOOK = '[Book] UPDATE_BOOK'
+export const REMOVE_BOOK_FROM_BASKET = '[Book] REMOVE_BOOK_FROM_BASKET'
 
 export class AddBook implements Action{
   readonly type = ADD_BOOK
@@ -32,6 +33,10 @@ export class UpdateBook implements Action{
   readonly type = UPDATE_BOOK
   constructor(public payload: Book){}
 }
+export class RemoveFromBasket implements Action{
+  readonly type = REMOVE_BOOK_FROM_BASKET
+  constructor(public payload: string){}
+}
 export type All =
   | AddBook
   | DeleteBook
@@ -39,4 +44,5 @@ export type All =
   | BuyBook
   | SelectBook
   | UpdateBook
+  | RemoveFromBasket
 

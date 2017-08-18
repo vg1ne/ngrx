@@ -1,4 +1,4 @@
-import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {Component, EventEmitter, Input, Output} from '@angular/core';
 import {Book} from "../../_models/book.model";
 
 @Component({
@@ -9,20 +9,9 @@ import {Book} from "../../_models/book.model";
 })
 export class BookBasketItemComponent{
   @Input() book: Book
-  // @Output() buy: EventEmitter<Book> = new EventEmitter()
-  // @Output() remove: EventEmitter<Book> = new EventEmitter()
+  @Output() remove: EventEmitter<Book> = new EventEmitter()
 
-  // buyBook(){
-  //   this.buy.emit(this.book)
-  // }
-  // removeBook(){
-  //   this.remove.emit(this.book)
-  // }
-  get isBuyDisabled(){
-    return this.book.count<1
+  removeBook(){
+    this.remove.emit(this.book)
   }
-  get available(){
-    return this.book.count - this.book.bought
-  }
-
 }

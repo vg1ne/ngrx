@@ -1,8 +1,9 @@
 <p>
-  book-basket works!
+  Your books basket
 </p>
 <section *ngIf="books$">
   <app-book-basket-item
+    (remove)="removeFromBasket($event)"
     *ngFor="let book of books$ | async"
     [book]="book">
   </app-book-basket-item>
