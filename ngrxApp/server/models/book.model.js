@@ -4,7 +4,8 @@ var Schema = mongoose.Schema;
 var bookSchema = new Schema({
   name: String,
   price: Number,
-  count: Number
+  count: Number,
+  bought: Number
 });
 
 var Book = mongoose.model('Book', bookSchema);

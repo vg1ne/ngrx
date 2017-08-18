@@ -18,8 +18,8 @@ export function bookReducer(state = [], action: BookActions.All){
       return state.concat(state, action.payload)
     case BookActions.BUY_BOOK:
       return state.map((item => {
-        if(item.id == action.payload._id){
-          item.count--
+        if(item._id == action.payload._id){
+          item.bought++;
         }
         return item;
       }))

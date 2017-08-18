@@ -19,7 +19,8 @@ export class BookAddComponent {
       {
         name: this.book.name,
         price: +this.book.price,
-        count: +this.book.count
+        count: +this.book.count,
+        bought: 0
       }
     ))
     this.clearBook()

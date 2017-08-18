@@ -11,15 +11,11 @@ const Book = require('../../server/models/book.model');
 const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-// var tarzan = new Book({
-//   name: 'Chris',
-//   price: 123,
-//   count: 14
-// });
-//
-// tarzan.save(function(err) {
-//   if (err) throw err;
-//   console.log('tarzan book saved successfully!');
+// Book.find(function(err, books) {
+//   books.forEach(function(book) {
+//     book.bought = 0;
+//     book.save();
+//   });
 // });
 
 router
@@ -39,10 +35,9 @@ router
   })
   .delete('/books', (req, res) => {
     Book.remove({_id: req.query.id},
-      function(err, bear) {
+      function(err) {
         if (err)
           res.send(err);
-
         res.status(200).send();
       })
   });
@@ -53,7 +48,8 @@ function addBook(book) {
   let bookItem = new Book({
     name: book.name,
     price: book.price,
-    count: book.count
+    count: book.count,
+    bought: book.bought
   });
 
   bookItem.save(function (err) {

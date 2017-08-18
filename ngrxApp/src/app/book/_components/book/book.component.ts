@@ -11,8 +11,7 @@ export class BookComponent {
   @Input() book: Book
   @Output() buy: EventEmitter<Book> = new EventEmitter()
   @Output() remove: EventEmitter<Book> = new EventEmitter()
-  constructor(){
-  }
+
   buyBook(){
     this.buy.emit(this.book)
   }
@@ -21,5 +20,8 @@ export class BookComponent {
   }
   get isBuyDisabled(){
     return this.book.count<1
+  }
+  get available(){
+    return this.book.count - this.book.bought
   }
 }

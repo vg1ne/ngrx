@@ -15,7 +15,7 @@ import {StoreModule} from "@ngrx/store";
 import {bookReducer} from "./book/_reducers/books.reducer";
 import {BookEffect} from "./book/_effects/book.effect";
 import {RouterModule, Routes} from "@angular/router";
-import {BooksListComponent, BooksStore} from "./book/_components/books-list/books-list.component";
+import {BooksListComponent} from "./book/_components/books-list/books-list.component";
 import {BookAddComponent} from "./book/_components/book-add/book-add.component";
 import {BookBasketComponent} from './book/_components/book-basket/book-basket.component';
 
