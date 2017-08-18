@@ -20,6 +20,7 @@ export class BooksListComponent{
   constructor(private store: Store<BooksStore>) {
     this.books = store.select('books')
   }
+  // TODO: add book-sandbox here, not store.dispatch
   onBuy(book: Book){
     this.store.dispatch(new BuyBook(book))
   }
