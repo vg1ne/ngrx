@@ -1,4 +1,3 @@
-<h1>Here will be header</h1>
 <nav md-tab-nav-bar>
   <a md-tab-link routerLink="/books" routerLinkActive="active">Books</a>
   <a md-tab-link routerLink="/book-add" routerLinkActive="active">Add book</a>
@@ -6,5 +5,7 @@
   <a md-tab-link routerLink="/book-basket" routerLinkActive="active">Book basket</a>
 </nav>
 <app-books-sandbox>
-  <router-outlet></router-outlet>
+  <section class="container">
+    <router-outlet></router-outlet>
+  </section>
 </app-books-sandbox>

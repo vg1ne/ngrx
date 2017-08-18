@@ -18,7 +18,7 @@ export class BookEditComponent {
   bookFormControl: FormControl;
   filteredBooks$: Observable<Book[]>
   selectedBook$: Observable<Book>
-
+  //TODO: fix on click selection of book
   constructor(private store: Store<BooksStore>,
               private booksService: BooksService) {
     this.bookFormControl = new FormControl()
