@@ -10,7 +10,7 @@ import {MdCardModule} from '@angular/material';
 import {MdButtonModule} from '@angular/material';
 import {MdInputModule} from '@angular/material';
 import {MdAutocompleteModule} from '@angular/material';
-
+import {MdChipsModule} from '@angular/material';
 @NgModule({
   imports: [
     CommonModule,
@@ -23,7 +23,8 @@ import {MdAutocompleteModule} from '@angular/material';
     MdCardModule,
     MdButtonModule,
     MdInputModule,
-    MdAutocompleteModule
+    MdAutocompleteModule,
+    MdChipsModule
   ],
   declarations: [],
   exports: [
@@ -35,7 +36,8 @@ import {MdAutocompleteModule} from '@angular/material';
     MdCardModule,
     MdButtonModule,
     MdInputModule,
-    MdAutocompleteModule]
+    MdAutocompleteModule,
+    MdChipsModule]
 })
 export class SharedModule {
 }

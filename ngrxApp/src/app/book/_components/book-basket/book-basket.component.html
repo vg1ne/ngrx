@@ -2,8 +2,15 @@
   Your books basket
 </p>
 <p>
+  Prices:
+  <md-chip-list>
+    <md-chip selected="true" color="primary" *ngFor="let book of books$ | async">
+      {{book.bought ? (book.price * book.bought) : book.price}}
+    </md-chip>
+  </md-chip-list>
   Total price: {{totalPrice$ | async}}
 </p>
+<br>
 <section *ngIf="books$">
   <app-book-basket-item
     (remove)="removeFromBasket($event)"
