@@ -1,3 +1,10 @@
 <p>
   book-basket works!
 </p>
+<section *ngIf="books">
+  <app-book-basket-item
+    *ngFor="let book of books | async"
+    [book]="book">
+  </app-book-basket-item>
+</section>
+

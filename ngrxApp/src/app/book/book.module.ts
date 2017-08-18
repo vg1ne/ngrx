@@ -8,6 +8,7 @@ import {BookAddComponent} from './_components/book-add/book-add.component';
 import {BookEditComponent} from './_components/book-edit/book-edit.component';
 import {BookEditableComponent} from './_components/book-editable/book-editable.component';
 import {BooksSandboxComponent} from './_sandbox/books-sandbox/books-sandbox.component';
+import {BookBasketItemComponent} from './_components/book-basket-item/book-basket-item.component';
 
 
 @NgModule({
@@ -15,8 +16,8 @@ import {BooksSandboxComponent} from './_sandbox/books-sandbox/books-sandbox.comp
     SharedModule
   ],
   declarations: [BookComponent, BooksListComponent, BookAddComponent, BookEditComponent,
-    BookEditableComponent, BooksSandboxComponent],
-  exports: [BookComponent, BooksListComponent, BookAddComponent, BookEditableComponent, BooksSandboxComponent]
+    BookEditableComponent, BooksSandboxComponent, BookBasketItemComponent],
+  exports: [BookComponent, BooksListComponent, BookAddComponent, BookEditableComponent, BooksSandboxComponent,BookBasketItemComponent]
 })
 export class BookModule {
 }
