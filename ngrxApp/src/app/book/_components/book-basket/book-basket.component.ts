@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component} from '@angular/core';
 import {BooksStore} from "../books-list/books-list.component";
 import {Store} from "@ngrx/store";
 import {Observable} from "rxjs/Observable";
@@ -14,10 +14,20 @@ import {RemoveFromBasket} from "../../_actions/book.actions";
 export class BookBasketComponent {
   books$: Observable<Book[]>
   store$: Store<BooksStore>
+  // totalPrice$: Observable<number>
+  totalPrice$: any
 
   constructor(store: Store<BooksStore>) {
     this.store$ = store
     this.books$ = store.select(selectBooksInBasket)
+
+    this.totalPrice$ = this
+      .books$
+      .map(books => {
+        return books.reduce((acc, book)=> {
+          return acc + (book['bought'] * book['price'])
+        }, 0)
+      })
   }
 
   removeFromBasket(book: Book){

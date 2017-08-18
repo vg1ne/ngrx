@@ -30,9 +30,11 @@ export class BookEditComponent {
     this.filteredBooks$ = this.bookFormControl.valueChanges
       .startWith(null)
       .map((book) => {
-        book && typeof book === 'object' ? book.name: book
+        return book && typeof book === 'object' ? book.name: book
       })
-      .map((book) => this.filterBooks(name));
+      .map((name) => {
+        return this.filterBooks(name)
+      });
 
     this.selectedBook$ = store.select('selectedBook')
   }

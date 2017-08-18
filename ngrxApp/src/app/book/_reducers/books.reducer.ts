@@ -54,8 +54,19 @@ export function bookReducer(state = [], action: BookActions.All){
 }
 
 export const selectBooksFeature = (state: BooksStore) => state.books
-export const selectBooksInBasket = createSelector(selectBooksFeature,
+export const selectBooksInBasket = createSelector(
+  selectBooksFeature,
   (state: Book[]) => state.filter(item => {
     return item.bought > 0
   }));
+// export const selectTotalPrice = createSelector(
+//   selectBooksFeature,
+//   (state: Book[]) => {
+//     const boughtBooks = state.filter(item => {
+//       return item.bought > 0
+//     })
+//     return boughtBooks.reduce((acc, book) => {
+//       return 1
+//     })
+//   });
 

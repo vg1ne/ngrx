@@ -1,6 +1,9 @@
 <p>
   Your books basket
 </p>
+<p>
+  Total price: {{totalPrice$ | async}}
+</p>
 <section *ngIf="books$">
   <app-book-basket-item
     (remove)="removeFromBasket($event)"
